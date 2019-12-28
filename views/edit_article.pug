@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/articles/edit/'+article._id)
+    //- #form-group
+    //-   label Title:
+    //-   input.form-control(name='title', type='text', value=article.title)
+    //- #form-group
+    //-   label Author:
+    //-   input.form-control(name='author', type='text', value=article.author)
+    //- #form-group
+    //-   label Body:
+    //-   textarea.form-control(name='body')= article.body
+    #form-group
+      label Activation Key:
+      input.form-control(name='activationcode', type='text', value=article.activationcode)
+    #form-group
+      label Company:
+      input.form-control(name='company', type='text', value=article.company)
+    #form-group
+      label User:
+      input.form-control(name='user', type='text', value=article.user)
+    #form-group
+      label Status:
+      input.form-control(name='status', type='text', value=article.status)
+    #form-group
+      label Expiration Date:
+      input.form-control(name='expirationdate', type='text', value=article.expirationdate)
+    #form-group
+      label Email:
+      input.form-control(name='email', type='text', value=article.email)
+    #form-group
+      label Laser Scanner:
+      input.form-control(name='laserhead', type='text', value=article.laserhead)
+    #form-group
+      label Data Logger:
+      input.form-control(name='datalogger', type='text', value=article.datalogger)
+    #form-group
+      label Camera:
+      input.form-control(name='camera', type='text', value=article.camera)
+    #form-group
+      label Comments:
+      textarea.form-control(name='comments')= article.comments
+    br
+    input.btn.btn-primary(type='submit', value='Submit')
